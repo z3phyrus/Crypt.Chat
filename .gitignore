@@ -1,0 +1,4 @@
+server/lib/__pycache__
+client/lib/__pycache__
+.DS_Store
+.idea/

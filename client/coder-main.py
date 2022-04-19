@@ -16,14 +16,14 @@ def internet_connection():
 
 internet_connection()
 
-nickname = input("Enter a nickname")
+nickname = input("Enter a nickname > ")
 # Can use config.ini files to store the nickname so the user wont have to input it all the time 
 # When the user wants to chainge their nickname we can have a keywork in chat that asks for a new nickname and changes the value in config.ini
 
 
 client = socket.socket(socket.AF_INET ,socket.SOCK_STREAM) 
 
-client.connect(("127.0.0.1",55555))
+client.connect(("127.0.0.1",1234))
 
 
 def receive_data():
@@ -53,7 +53,7 @@ def writing():
 receive_thread = threading.Thread(target=receive_data)
 receive_thread.start()
 
-writing_thread = threading.Thread(target=writing)#
+writing_thread = threading.Thread(target=writing)
 writing_thread.start()
 
 
