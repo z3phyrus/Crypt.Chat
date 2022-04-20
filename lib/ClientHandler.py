@@ -1,7 +1,9 @@
 import socket
+import sys
 
 class ClientHandler:
     def __init__(self, host, port):
+        sys.dont_write_bytecode = True
         self.nick = input('Choose a nickname > ')
         self.client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.host = host

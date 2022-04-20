@@ -1,8 +1,10 @@
 import socket
+import sys
 import threading
 
 class SocketHandler:
     def __init__(self, host, port):
+        sys.dont_write_bytecode = True
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.host = host
         self.port = port
